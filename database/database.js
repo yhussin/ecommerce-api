@@ -1,7 +1,5 @@
 const mongoose = require('mongoose')
 
-
-
 const connectDB = async () => {
   try {
     await mongoose.connect('mongodb+srv://ecommerce-user:TU9rShJzr9FOdBSi@cluster0-vdzbv.mongodb.net/ecommerce-final?retryWrites=true&w=majority', {
