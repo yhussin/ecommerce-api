@@ -25,6 +25,17 @@ router.route('/add').post((req, res) => {
        .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/cartid').post((req, res) => {
+
+    Product.find().where('_id').in(req.body.cart).exec((err, records) => {
+        console.log("records", records)
+        res.status(200).json({
+            message: "Success", 
+            products: records
+        })
+    });
+}) 
+
 router.route('/:id').get((req, res) => {
     Product.findById(req.params.id)
       .then(product => res.json(product))
