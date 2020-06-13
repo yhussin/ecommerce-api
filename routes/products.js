@@ -42,7 +42,7 @@ router.route('/:id').get((req, res) => {
       .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/:id').get((req, res) => {
+router.route('/:id').delete((req, res) => {
     Product.findByIdAndDelete(req.params.id)
       .then(() => res.json('Product Deleted'))
       .catch(err => res.status(400).json('Error: ' + err));
