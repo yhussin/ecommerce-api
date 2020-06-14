@@ -13,6 +13,8 @@ const connectDB = async () => {
 }
 
 module.exports = {
-  connectDB, 
+  
   User: require('../models/user')
 }
+
+module.exports = connectDB;
