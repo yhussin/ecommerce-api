@@ -6,7 +6,6 @@ const ctrl = require('../controllers')
 router.get('/:id', ctrl.users.show)
 
 
-
 module.exports = router;
 
 
